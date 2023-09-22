@@ -8,10 +8,12 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #d50a0a;
+    background-color: #a51111;
     color: #fff;
     text-align: center;
     padding: 20px;
+    position: sticky;
+}
   
 }
 
@@ -33,7 +35,7 @@ header {
 
 /* Navigation Styles */
 nav ul {
-    background-color: #13c895;
+    background-color: #1a0a9b;
     color: #fff;
     text-align: center;
     list-style-type: none;

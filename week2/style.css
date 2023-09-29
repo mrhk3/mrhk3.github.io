@@ -35,7 +35,7 @@ header {
 
 
 /* Navigation Styles */
- .nav-menu li a:active {
+ nav-menu li a:active {
     background: #f1d74c;
     color: #ffffff;
  }

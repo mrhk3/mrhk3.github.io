@@ -38,6 +38,7 @@ header {
  .nav-menu li a:active {
     background: #f1d74c;
     color: #ffffff;
+ }
 nav ul {
     background-color: #1a0a9b;
     color: #fff;
@@ -194,4 +195,4 @@ footer a:hover {
 footer p {
     margin: 10px 0 0;
 }
- }
+ 

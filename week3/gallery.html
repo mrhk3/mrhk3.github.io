@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - Cruiser Voyages</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@100&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery-container {
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .gallery-container img {
+      width: 24%;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1 class="headeraH1">Cruiser Voyages | Travel Agency</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+      </ul>
+    </nav>
+ 
+    <main class="services">
+      <h1>Gallery</h1>
+       <div class="container">
+        <div class="myslides"><img src="images/1.png" alt="travel">
+          <div class="numbertext">1/8</div>
+        </div>
+        <div class="myslides"><img src="images/2.png" alt="travel">
+          <div class="numbertext">2/8</div>
+        </div>
+        <div class="myslides"><img src="images/3.png" alt="travel">
+          <div class="numbertext">3/8</div>
+        </div>
+        <div class="myslides"><img src="images/4.png" alt="travel">
+          <div class="numbertext">4/8</div>
+        </div>
+        <div class="myslides"><img src="images/5.png" alt="travel">
+          <div class="numbertext">5/8</div>
+        </div>
+        <div class="myslides"><img src="images/6.png" alt="travel">
+          <div class="numbertext">6/8</div>
+        </div>
+        <div class="myslides"><img src="images/7.png" alt="travel">
+          <div class="numbertext">7/8</div>
+        </div>
+        <div class="myslides"><img src="images/8.png" alt="travel">
+          <div class="numbertext">8/8</div>
+        </div>
+        <a class="prev" onclick="plusSlides (-1)"></a>
+        <a class="next" onclick="plusslides (1)"></a> 
+      </div>
+<!-- 
+       <div class="gallery-container">
+			<img src="images/1.png" alt="Spa Image 1">
+			<img src="images/2.png" alt="Spa Image 2">
+			<img src="images/3.png" alt="Spa Image 3">
+			<img src="images/4.png" alt="Spa Image 4">
+			<img src="images/5.png" alt="Spa Image 5">
+			<img src="images/6.png" alt="Spa Image 6">
+			<img src="images/7.png" alt="Spa Image 7">
+			<img src="images/8.png" alt="Spa Image 7">
+		</div>  -->
+
+      <script>
+        // Declare a variable to keep track of the 20 Sumtan.
+
+let slideIndex = 1;
+ 
+
+showslides(slideindex); 
+function plusslides(n){
+
+showslides(slideIndex += n);}
+
+// function to jump to a specific slide in the slideshow 
+function currentslide(n){
+showslides (slideIndex = n);
+}
+
+ 
+
+// Main function to control the display of slides
+
+function showslides(n) {
+
+ 
+
+ let i;
+
+// Get all elements with class="myslides" and "demo" as as the caption text. 
+
+let slides = document.getElementsByClassName("myslides");
+
+let dots = document.getElementsByClassName("demo");
+
+let captionText = document.getElementById("caption");
+
+ 
+
+// Loop back to the firs let slideIndex: number ted past the last slide.
+
+if (n >slides. length) {slideIndex = 1}
+
+ 
+
+// Loop back to the last slide if having navigated before the first slide. 
+if (n < 1) {slideIndex = slides.length}
+ 
+
+// Hide all the slides initially.
+
+for (i=0; i < slides.length; i++) {
+   slides[i].style.display= "none";
+
+}
+
+// Remove the "active" class from all the dots.
+
+for (i = 0; i < dots.length; i++) 
+{ dots[i].className = dots[i].className.replace(" active", "");
+
+}
+
+
+
+
+
+
+
+
+
+
+      </script>
+
+      <style>
+        * {
+box-sizing: border-box;
+}
+.slideshow-img {
+vertical-align: middle;
+width: 100%;
+}
+/* Position the image container (needed to position the left and right 
+arrows) */
+.container {
+position: relative;
+}
+/* Hide the images by default */
+.mySlides {
+display: none;
+}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+cursor: pointer;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+cursor: pointer;
+position: absolute;
+top: 40%;
+width: auto;
+padding: 16px;
+margin-top: -50px;
+color: white;
+font-weight: bold;
+font-size: 20px;
+border-radius: 0 3px 3px 0;
+user-select: none;
+-webkit-user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+} -->
+
+      <!-- </style> -->
+      <!-- Call to Action -->
+      <section class="cta-container">
+        <h2>Ready to Experience Our Services?</h2>
+        <p>Join us today and discover the difference we can make for you!</p>
+        <a href="contact.html" class="cta-button">Contact Us Now</a>
+      </section>
+
+    </main>
+    <footer>
+      <ul>
+        <li><a href="https://www.facebook.com/">Facebook</a></li>
+        <li><a href="https://twitter.com/">Twitter</a></li>
+        <li><a href="https://www.instagram.com/">Instagram</a></li>
+      </ul>
+      <p>&copy; 2024 Cruiser Voyages | Travel Agency. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+
+</html>

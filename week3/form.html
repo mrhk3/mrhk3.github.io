@@ -113,7 +113,7 @@ block-level display, font size, padding, full width */
       <tr>
         <td>Name:</td>
         <td id="nameborder">
-          <input type="text" placeholder="Name" name="name" />
+          <input id="inputID" type="text" placeholder="Name" name="name" />
           <div class="error" id="name-error"></div>
         </td>
       </tr>
@@ -141,19 +141,27 @@ block-level display, font size, padding, full width */
     </table>
     <button type="submit">Submit</button>
   </form>
-
   <script>
     const form = document.getElementById("form");
 
     form.addEventListener("submit", function (event) {
+
+      // Variable "valid" that changes to false when the form is incomplete
       let valid = true;
 
       // Username Validation
       const nameInput = form.elements["name"];
+      const nameError = document.getElementById("name-error");
+      const nameField = document.getElementById("name-field");
+
+      // if name field is empty
       if (nameInput.value.trim() === "") {
         valid = false;
-        document.getElementById("name-error").textContent =
-          "Name is required";
+        nameError.textContent = "Name is required";
+        nameInput.style.borderColor = "#ff3860"; // Set border color to red
+      } else {
+        nameError.textContent = "";
+        nameInput.style.borderColor = "#09c372"; // Set border color to green for success
       }
 
       // Email Validation
@@ -162,12 +170,17 @@ block-level display, font size, padding, full width */
         valid = false;
         document.getElementById("email-error").textContent =
           "Email is required";
+        emailInput.style.borderColor = "#ff3860"; // Set border color to red
       } else if (
         !emailInput.value.trim().toLowerCase().endsWith("@gmail.com")
       ) {
         valid = false;
         document.getElementById("email-error").textContent =
           "Please use a Gmail address";
+        email.style.borderColor = "#ff3860"; // Set border color to red
+      } else {
+        document.getElementById("email-error").textContent = "";
+        emailInput.style.borderColor = "#09c372"; // Set border color to green for success
       }
 
       // Password Validation
@@ -176,10 +189,15 @@ block-level display, font size, padding, full width */
         valid = false;
         document.getElementById("password-error").textContent =
           "Password is required";
+        passwordInput.style.borderColor = "#ff3860"; // Set border color to red
       } else if (passwordInput.length < 8) {
         valid = false;
         document.getElementById("password-error").textContent =
           "Password must be at least 8 characters";
+        passwordInput.style.borderColor = "#ff3860"; // Set border color to red
+      } else {
+        document.getElementById("password-error").textContent = "";
+        passwordInput.style.borderColor = "#09c372"; // Set border color to green for success
       }
 
       // Confiring Password Validation
@@ -188,10 +206,15 @@ block-level display, font size, padding, full width */
         valid = false;
         document.getElementById("confirm-password-error").textContent =
           "Confirm Password is required";
+        confirmPasswordInput.style.borderColor = "#ff3860"; // Set border color to red
       } else if (confirmPasswordInput.value !== passwordInput.value) {
         valid = false;
         document.getElementById("confirm-password-error").textContent =
           "Passwords do not match";
+        confirmPasswordInput.style.borderColor = "#ff3860"; // Set border color to red
+      } else {
+        document.getElementById("confirm-password-error").textContent = "";
+        confirmPasswordInput.style.borderColor = "#09c372"; // Set border color to green for success
       }
 
       if (!valid) {
@@ -201,6 +224,7 @@ block-level display, font size, padding, full width */
       }
     });
   </script>
+
 </body>
 
 </html>

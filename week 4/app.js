@@ -81,11 +81,14 @@
 //                     alert("An error occurred. Please try again later.");
 //                 }
 //             });
+
+
+
 document.getElementById('btn').addEventListener('click', function () {
     const apiKey = '4f19eded604b85c15fb54276a90c5f19'; // Replace 'YOUR_API_KEY' with your OpenWeatherMap API key
-    const cityInput = document.getElementById("cityInput");
-    const btun = document.getElementById("btun");
-    const weatherInfo = document.getElementById("weather-info");
+    const cityInput = document.getElementById('cityInput');
+    const button = document.getElementById('btn2');
+    const weatherInfo = document.getElementById('weather-info');
 
     // Add a click event listener to the button
     btun.addEventListener("click", function () {
@@ -98,7 +101,7 @@ document.getElementById('btn').addEventListener('click', function () {
         }
 
         // Create the API URL for the weather data
-        const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}';
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
         fetch(apiUrl)
             .then((response) => {
@@ -136,3 +139,41 @@ document.getElementById('btn').addEventListener('click', function () {
             });
     });
 });
+
+
+// const cityInput = document. getElementById('cityInput');
+// const button = document. getElementById('btn2');
+// const Weatherinfo = document.getElementById('weather-info');
+// button. addEventlistener('click', function(){
+// const api = 'dea8acdd23e7995e921ab1c49957c170';
+// const name = input.value;
+// // alert user if button is clicked with no input
+// if (!name){
+// alert ("Please Enter a City name");
+//  return;
+// }
+// // creating the httpRequest to access info from openweathermap
+// var ourRequest = new XMLHttpReguest();
+// ourRequest.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=5{api}');
+// // Error messages printed for different cases
+// ourRequest.onload = function() {
+// if (ourRequest. status > 200 && ourRequest.status < 400) {
+// var data = JSON.parse(ourRequest.responseText);
+// if
+// (data.cod == 200) {
+// renderweather (data);
+// }
+// } else {
+ 
+//     console.error ('HTTP Status Code Error:', ourRequest.status);
+// }
+// };
+//     ourRequest.onreadystatechange = function() {
+//     if (ourRequest.readystate == 4  && ourRequest.status == 200) {
+//     const errorResponse = JSON.parse(ourRequest.responseText);
+//     console.error ('API-Specific Error:", errorResponse.message);
+//     3;
+//     ourRequest.onerror =
+//     function() f
+//     console.error(Network Error");
+//     our Request. send 0);

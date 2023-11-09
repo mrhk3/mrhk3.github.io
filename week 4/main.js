@@ -1,5 +1,7 @@
 var cityContainer = document.getElementById("city-info");
 var btn = document.getElementById("btn");
+
+
 btn.addEventListener("click", function(){
 var ourRequest = new XMLHttpRequest();
 ourRequest.open('GET', 'https://mrhk3.github.io/week 4/cities1.json');
@@ -10,6 +12,8 @@ btn.classList.add("hide-me");
 };
 ourRequest.send();
 });
+
+
 function renderHTML(data){
 var htmlString = "";
 for (i=0; i<data.length; i++){

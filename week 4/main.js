@@ -2,7 +2,7 @@ var cityContainer = document.getElementById("city-info");
 var btn = document.getElementById("btn");
 btn.addEventListener("click", function(){
 var ourRequest = new XMLHttpRequest();
-ourRequest.open('GET', 'https://mrhk3.github.io/mrhk3.github.io/week 4/cities1.json');
+ourRequest.open('GET', 'https://mrhk3.github.io/week 4/cities1.json');
 ourRequest.onload = function() {
 var ourData = JSON.parse(ourRequest.responseText);
 renderHTML(ourData);

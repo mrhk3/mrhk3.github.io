@@ -98,7 +98,7 @@ document.getElementById('btn').addEventListener('click', function () {
         }
 
         // Create the API URL for the weather data
-        const apiUrl = https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey};
+        const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}';
 
         fetch(apiUrl)
             .then((response) => {

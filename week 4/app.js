@@ -84,10 +84,10 @@
 
 
 
-document.getElementById('btnn').addEventListener('click', function () {
+document.getElementById('btn').addEventListener('click', function () {
     const apiKey = '4f19eded604b85c15fb54276a90c5f19'; // Replace 'YOUR_API_KEY' with your OpenWeatherMap API key
     const cityInput = document.getElementById('cityInput');
-    const button = document.getElementById('btnn');
+    const button = document.getElementById('btn');
     const weatherInfo = document.getElementById('weather-info');
 
     // Add a click event listener to the button
